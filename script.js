@@ -48,7 +48,7 @@ function checkWinner() {
 	for (let pattern of win) {
 		const [a, b, c] = pattern;
 
-		if (allBoxes[a].innerText !== "" && allBoxes[a].innerText === allBoxes[b].innerText && allBoxes[a].innerText === allBoxes[c].innerText) {
+		if(allBoxes[a].innerText!=="" && allBoxes[a].innerText===allBoxes[b].innerText && allBoxes[a].innerText===allBoxes[c].innerText){
 			allBoxes[a].style.backgroundColor = "#800080"; // Purple color
 			allBoxes[b].style.backgroundColor = "#800080"; // Purple color
 			allBoxes[c].style.backgroundColor = "#800080"; // Purple color
