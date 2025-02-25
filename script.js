@@ -23,27 +23,23 @@ const win = [
 
 let turn = true;
 
-
 boxes.addEventListener('click', (e) => {
-    const box = document.getElementById(e.target.id);
-
-    if (box && box.classList.contains("box") && box.innerText === "") {
-        box.innerText = turn ? "X" : "O";
-        box.style.pointerEvents = "none"; // Disable further clicks on the same box
-
-        let winner = checkWinner();
-        if (winner) {
-            document.querySelector(".message").innerText = `${winner === "X" ? player1.value : player2.value}, congratulations you won!`;
-            document.querySelectorAll(".box").forEach(b => b.style.pointerEvents = "none"); // Disable all boxes
-            return;
-        } else if (checkDraw()) {
-            document.querySelector(".message").innerText = "It's a draw!";
-            return;
-        }
-
-        turn = !turn;
-        document.querySelector(".message").innerText = `${turn ? player1.value : player2.value}, you're up`;
-    }
+	const box = document.getElementById(e.target.id);
+	if (box.classList.contains("box") && box.innerText == "") {
+		box.innerText = turn ? "X" : "O";
+		box.style.pointerEvents = "none"; // Disable further clicks
+		let winner = checkWinner();
+		if (winner) {
+			Name.innerText = `${winner === "X" ? Player1.value : Player2.value} congratulations you won!`;
+			document.querySelectorAll(".box").forEach(box => box.style.pointerEvents = "none"); // Stop game
+			return;
+		} else if (checkDraw()) {
+			Name.innerText = "It's a draw!";
+			return;
+		}
+		turn = !turn;
+		Name.innerText = `${turn ? Player1.value : Player2.value}, you're up`;
+	}
 });
 
 function checkWinner() {
