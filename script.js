@@ -30,7 +30,7 @@ boxes.addEventListener('click', (e) => {
 		box.style.pointerEvents = "none"; // Disable further clicks
 		let winner = checkWinner();
 		if (winner) {
-			Name.innerText = `${winner === "X" ? Player1.value : Player2.value}, congratulations you won!`;
+			Name.innerText = `${winner === "X" ? Player1.value : Player2.value} congratulations you won!`;
 			document.querySelectorAll(".box").forEach(box => box.style.pointerEvents = "none"); // Stop game
 			return;
 		} else if (checkDraw()) {
