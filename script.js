@@ -1,7 +1,7 @@
 const submitButton = document.querySelector("#submit");
 const Player1 = document.querySelector("#player1");
 const Player2 = document.querySelector("#player2");
-const Name = document.querySelector("#name");
+const Name = document.querySelector("#message");
 const boxes = document.querySelector("#boxes");
 
 submitButton.addEventListener('click', () => {
