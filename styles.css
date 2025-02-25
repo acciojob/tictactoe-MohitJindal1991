@@ -1,1 +1,20 @@
 /*  your css code here. If applicable */
+
+#boxes{
+	display:none;
+	margin:auto;
+  grid-template-columns: 100px 100px 100px;
+	
+}
+.box{
+	width:100px;
+	height:100px;
+	border:1px solid black;
+	background-color:#FFC0CB;
+	font-weight:bold;
+	font-size:50px;
+	text-align:center;
+	line-height:100px;
+	height:100px;
+	width:100px;
+}
